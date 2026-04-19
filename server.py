@@ -147,7 +147,7 @@ def get_tool_description(tool_info):
 
 def audit_log(action: str, details: dict = None):
     """Write to audit log for security tracking."""
-    log_path = getattr(config, 'AUDIT_LOG_FILE', '/home/biqu/klipper-mcp/data/audit.log')
+    log_path = config.AUDIT_LOG_FILE
     os.makedirs(os.path.dirname(log_path), exist_ok=True)
     
     entry = {
